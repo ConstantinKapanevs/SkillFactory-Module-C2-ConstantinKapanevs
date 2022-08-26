@@ -119,12 +119,12 @@ class Board:
                 ship.lives -= 1
                 self.board[shot.x][shot.y] = ' X '
                 if ship.lives == 0:
-                    print('Корабль поврежден!')
+                    print('Корабль уничтожен!')
                     self.casualties += 1
                     self.shadow(ship.coordinates, deploy=False)
                     return 'Destroyed'
                 else:
-                    print('Корабль уничтожен!')
+                    print('Корабль поврежден!')
                     return 'Damaged'
         print('Промах!')
         self.board[shot.x][shot.y] = ' * '
